@@ -1,0 +1,155 @@
+.header {
+    background-color: #060f18;
+    padding-bottom: 50px;
+    height: 100vh;
+    &-btn {
+        position: relative;
+        width: 200px;
+        margin: 0 auto;
+        padding-top: 20px;
+        .btn {
+            text-decoration: none;
+            transition: all 0.6s;
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+    .text {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .title {
+        text-align: center;
+        padding: 0 0 0 20px;
+        text-transform: uppercase;
+        // width: 50%;
+        &__header {
+            color: #4e5763;
+            font-weight: 300;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        &__subheader {
+            font-size: 38px;
+            font-weight: 700;
+
+        }
+    }
+    &__img {
+        border-radius: 1px solid #060f18;
+        width: 500px;
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 30%;
+            border: 1px solid #060f18;
+        }
+        // height: 100px;
+        // width: 400px;
+    }
+    .social {
+        &__links {
+            padding: 0;
+            li {
+                margin-right: 30px;
+                border: 1px solid #757575;
+                list-style-type: none;
+                margin-top: 20px;
+                display: block;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+.btn {
+    &:before {
+        content: "";
+        width: 0;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        transition: all 0.5s;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            left: 0;
+            background: #fff;
+        }
+    }
+}
+.github {
+    img {
+        background-color: #b4ceee;
+        transition: all .5s ease;
+        &:hover {
+            border-radius: 100%;
+            background-color: #5d75ab;
+        }
+    }
+}
+.hh {
+    img {
+        background-color: #b4ceee;
+        transition: all .5s ease;
+    }
+    &:hover {
+        img {
+            border-radius: 100%;
+            background-color: rgb(141, 4, 4);
+        }
+    }
+}
+.menu {
+    padding: 10px 5px;
+    // background-color: rgba(#0a192b, 0.25);
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
+        margin: 0;
+        li {
+            list-style-type: none;
+            position: relative;
+        }
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            &:before {
+                content: "";
+                width: 0;
+                height: 0.1em;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                background: #fff;
+                transition: all 0.3s;
+            }
+            &:hover {
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+.line {
+    width: 2px;
+    height: 200px;
+    background-color: rgba(#fff, 0.5);
+}

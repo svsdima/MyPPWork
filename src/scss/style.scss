@@ -1,0 +1,32 @@
+@import './base/libs';
+@import './base/_global';
+
+* {
+    font-family: SourceSerifPro;
+    color: #fff;
+}
+body {
+    background-color: #000;
+}
+img {
+    display: inline-block;
+    width: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+.count {
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    color: #af71af;
+  }
+
+@import './block/header';
+@import './block/skills';
+@import './block/portfolio';
+
+@import './base/media';
+

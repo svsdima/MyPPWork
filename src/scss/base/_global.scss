@@ -1,0 +1,19 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+	text-transform: uppercase;
+}
+.pageup {
+    opacity: 0;
+	width: 26px ;
+	height: 26px;
+	position: fixed;
+	bottom: 50px;
+	right: 5%;
+	z-index: 30;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid white;
+    transition: 1s all;
+}
