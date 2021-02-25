@@ -3,8 +3,7 @@
     // background: url(../img/bg-header.jpg) center (center / cover) no-repeat;
     background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
     padding-bottom: 50px;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
 
     // position: relative;
     // color: #fff;
@@ -142,44 +141,49 @@
         }
     }
 }
-.menu {
-    padding: 10px 5px;
-    // background-color: rgba(#0a192b, 0.25);
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 5px;
-        margin: 0;
-        li {
-            list-style-type: none;
-            position: relative;
-        }
-        a {
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            &:before {
-                content: "";
-                width: 0;
-                height: 0.1em;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                background: #fff;
-                transition: all 0.3s;
-            }
-            &:hover {
-                &:before {
-                    width: 100%;
-                    left: 0;
-                    background: #fff;
-                }
-            }
-        }
-    }
-}
+// .menu {
+//     padding: 10px 5px;
+//     // background-color: rgba(#0a192b, 0.25);
+//     width: 200px;
+//     height: 100vh;
+//     background-color: black;
+//     z-index: 0;
+//     &__list {
+//         text-align: center;
+//         // display: flex;
+//         // justify-content: space-between;
+//         // align-items: center;
+//         padding: 10px 5px;
+//         margin: 0;
+//         li {
+//             list-style-type: none;
+//             position: relative;
+//         }
+//         a {
+//             text-decoration: none;
+//             font-size: 14px;
+//             font-weight: 700;
+//             text-transform: uppercase;
+//             &:before {
+//                 content: "";
+//                 width: 0;
+//                 height: 0.1em;
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 50%;
+//                 background: #fff;
+//                 transition: all 0.3s;
+//             }
+//             &:hover {
+//                 &:before {
+//                     width: 100%;
+//                     left: 0;
+//                     background: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
 .line {
     width: 400px;
     height: 2px;

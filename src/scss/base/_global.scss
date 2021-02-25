@@ -18,3 +18,33 @@
 	border: 1px solid white;
     transition: 1s all;
 }
+
+.preloader_malc {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, #191e27 0%, #060f18 100%);
+	z-index: 99;
+	transition: .5s all ease;
+	div {
+		background: #fff;
+		width: 260px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 8px;
+		font-family: arial;
+		font-size: 15px;
+		color: #111;
+		text-align: center;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
