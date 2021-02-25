@@ -3576,9 +3576,10 @@ img {
   color: #af71af; }
 
 .header {
-  background-color: #060f18;
+  background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
   padding-bottom: 50px;
-  height: 100vh; }
+  min-height: 100vh;
+  min-width: 100vw; }
   .header-btn {
     position: relative;
     width: 200px;
@@ -3590,17 +3591,15 @@ img {
       font-size: 25px;
       font-weight: 300; }
   .header__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 20px; }
+    padding-top: 250px; }
   .header .text {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
     position: relative; }
   .header .title {
     text-align: center;
-    padding: 0 0 0 20px;
     text-transform: uppercase; }
     .header .title__header {
       color: #4e5763;
@@ -3619,9 +3618,11 @@ img {
       border-radius: 30%;
       border: 1px solid #060f18; }
   .header .social__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0; }
     .header .social__links li {
-      margin-right: 30px;
       border: 1px solid #757575;
       list-style-type: none;
       margin-top: 20px;
@@ -3644,12 +3645,14 @@ img {
   left: 0;
   background: #fff; }
 
-.github img {
-  background-color: #b4ceee;
-  transition: all .5s ease; }
-  .github img:hover {
-    border-radius: 100%;
-    background-color: #5d75ab; }
+.github {
+  margin-right: 30px; }
+  .github img {
+    background-color: #b4ceee;
+    transition: all .5s ease; }
+    .github img:hover {
+      border-radius: 100%;
+      background-color: #5d75ab; }
 
 .hh img {
   background-color: #b4ceee;
@@ -3690,8 +3693,9 @@ img {
         background: #fff; }
 
 .line {
-  width: 2px;
-  height: 200px;
+  width: 400px;
+  height: 2px;
+  margin-top: 30px;
   background-color: rgba(255, 255, 255, 0.5); }
 
 .skills {
@@ -3826,6 +3830,40 @@ img {
     left: 0;
     right: 0;
     transition: all .5s ease; }
+
+.about-me {
+  padding: 20px 0 50px 0;
+  background-color: #0a192b; }
+  .about-me__wrapper {
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    background-color: rgba(0, 0, 0, 0.25); }
+  .about-me__img {
+    width: 500px; }
+    .about-me__img img {
+      display: block;
+      width: 100%;
+      border-radius: 30%; }
+  .about-me__header {
+    color: #4e5763;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: left; }
+  .about-me__content {
+    padding: 20px; }
+    .about-me__content span {
+      display: block;
+      font-weight: 300;
+      font-size: 20px;
+      padding-top: 10px; }
+  .about-me__information {
+    margin-bottom: 20px;
+    padding: 20px; }
 
 @media (max-width: 1300px) {
   .header__img {

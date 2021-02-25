@@ -1,0 +1,43 @@
+.about-me {
+    padding: 20px 0 50px 0;
+    background-color: #0a192b;
+    &__wrapper {
+        padding: 20px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    &__img {
+        width: 500px;
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 30%;
+        }
+    }
+    &__header {
+        color: #4e5763;
+        font-weight: 500;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    &__content {
+        padding: 20px;
+        
+        span {
+            display: block;
+            font-weight: 300;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+    }
+    &__information {
+        margin-bottom: 20px;
+        padding: 20px;
+        
+    }
+}
