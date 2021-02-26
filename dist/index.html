@@ -232,23 +232,29 @@
     <section class="portfolio" id="works">
         <div class="container">
             <div class="title">Проекты</div>
+            <ul class="portfolio__menu">
+                <li class="all active">Все работы</li>
+                <li class="landing">Лэндинги</li>
+                <li class="store">Интернет-магазины</li>
+                <li class="app">Приложения</li>
+            </ul>
             <div class="portfolio__wrapper">
                 <div class="portfolio__list">
-                    <div class="portfolio__item item">
-                        <a href="./projects/gosurf/index.html"><img src="img/portfolio/runsmart.jpg" alt="runsmart"></a>
+                    <div class="portfolio__item item all landing store">
+                        <a href="./projects/runsmart/index.html"><img src="img/portfolio/runsmart.jpg" alt="runsmart"></a>
                         <div class="item__content">
                             <span class="item__head">Runsmart</span>
                             <span class="item__subhead">Пульсометры и спортивные часы</span>
                         </div>
                     </div>
-                    <div class="portfolio__item item">
-                        <a href="./projects/gosurf/index.html"><img src="img/portfolio/dininroom.jpg" alt="dininroom"></a>
+                    <div class="portfolio__item item all landing">
+                        <a href="./projects/dininroom/index.html"><img src="img/portfolio/dininroom.jpg" alt="dininroom"></a>
                         <div class="item__content">
                             <span class="item__head">Столовая.РУ</span>
                             <span class="item__subhead">оснащение предприятий питания</span>
                         </div>
                     </div>
-                    <div class="portfolio__item item">
+                    <div class="portfolio__item item all landing">
                         <a href="./projects/gosurf/index.html"><img src="img/portfolio/go-surf.jpg" alt="go-surf"></a>
                         <div class="item__content">
                             <span class="item__head">Go-surf</span>
@@ -256,6 +262,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
+                <div class="portfolio__no">Такой работы пока что не было сделано :(</div>
             </div>
         </div>
     </section>
@@ -281,6 +290,35 @@
                         <span>Факультет: Автомобильный транспорт</span>
                         <span>Специальность: Сервис транспортных средств</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-me">
+        <div class="container">
+            <div class="contact-me__wrapper">
+                <div class="form">
+                    <form action="#" id="form" class="form__body">
+                        <div class="title">Связаться со мной</div>
+                        <div class="form__item">
+                            <label for="formName" class="form__label">Имя*:</label>
+                            <input id="forName" type="text" name="name" class="form__input _req">
+                        </div>
+                        <div class="form__item">
+                            <label for="formEmail" class="form__label">E-mail*:</label>
+                            <input id="forEmail" type="text" name="email" class="form__input _req _email">
+                        </div>
+                        <div class="form__item">
+                            <label for="formPhone" class="form__label">Телефон*:</label>
+                            <input id="forPhone" type="text" name="phone" class="form__input _req">
+                        </div>
+                        <div class="form__item">
+                            <label for="formMessage" class="form__label">Сообщение:</label>
+                            <textarea name="message" id="formMessage" class="form__input"></textarea>
+                        </div>
+                        <button type="submit" class="form__button">Отправить</button>
+                    </form>
                 </div>
             </div>
         </div>

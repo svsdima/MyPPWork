@@ -123,6 +123,153 @@ const burger = (menuSelector, burgerSelector) => {
 
 /***/ }),
 
+/***/ "./src/js/filter.js":
+/*!**************************!*\
+  !*** ./src/js/filter.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const filter = () => {
+  const menu = document.querySelector('.portfolio__menu'),
+        items = menu.querySelectorAll('li'),
+        btnAll = menu.querySelector('.all'),
+        btnLanding = menu.querySelector('.landing'),
+        btnStore = menu.querySelector('.store'),
+        btnApp = menu.querySelector('.app'),
+        wrapper = document.querySelector('.portfolio__wrapper'),
+        markAll = wrapper.querySelectorAll('.all'),
+        markLanding = wrapper.querySelectorAll('.landing'),
+        markStore = wrapper.querySelectorAll('.store'),
+        markApp = wrapper.querySelectorAll('.app'),
+        no = document.querySelector('.portfolio__no');
+  /* Фильтрация элементов */
+
+  const typeFilter = markType => {
+    markAll.forEach(mark => {
+      mark.style.display = 'none';
+      mark.classList.remove('animate__animated', 'animate__fadeIn');
+    });
+    no.style.display = 'none';
+    no.classList.remove('animate__animated', 'animate__fadeIn');
+
+    if (markType) {
+      markType.forEach(mark => {
+        mark.style.display = 'flex';
+        mark.classList.add('animate__animated', 'animate__fadeIn');
+      });
+    } else {
+      no.style.display = 'block';
+      no.classList.add('animate__animated', 'animate__fadeIn');
+    }
+  };
+
+  btnAll.addEventListener('click', () => {
+    typeFilter(markAll);
+  });
+  btnLanding.addEventListener('click', () => {
+    typeFilter(markLanding);
+  });
+  btnStore.addEventListener('click', () => {
+    typeFilter(markStore);
+  });
+  btnApp.addEventListener('click', () => {
+    typeFilter();
+  });
+  menu.addEventListener('click', e => {
+    let target = e.target;
+
+    if (target && target.tagName == "LI") {
+      items.forEach(btn => btn.classList.remove('active'));
+      target.classList.add('active');
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (filter);
+
+/***/ }),
+
+/***/ "./src/js/form.js":
+/*!************************!*\
+  !*** ./src/js/form.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const form = idElement => {
+  const form = document.getElementById(idElement),
+        formWrapper = document.querySelector('.contact-me');
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e) {
+    e.preventDefault();
+    let error = formValidate(form);
+    let formData = new FormData(form);
+
+    if (error === 0) {
+      formWrapper.classList.add('_sending'); // let response = await fetch('sendmail.php', {
+      //     method: 'POST',
+      //     body: formData
+      // });
+      // if (response.ok) {
+      //     let result = await response.json();
+      //     alert(result.message);
+      //     formPreview.innerHTML = '';
+      //     form.reset();
+      // } else {
+      //     alert('Ошибка');
+      // }
+    } else {
+      alert('Заполните обязательные поля');
+    }
+  }
+
+  function formValidate(form) {
+    let error = 0,
+        formReq = document.querySelectorAll('._req');
+
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if (input.classList.contains('_email')) {
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+  }
+
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  } // /* Тест email */
+  // function emailTest(input) {
+  //     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  // }
+
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (form);
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -135,6 +282,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _progress_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./progress-bar */ "./src/js/progress-bar.js");
 /* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scrolling */ "./src/js/scrolling.js");
 /* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./burger */ "./src/js/burger.js");
+/* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter */ "./src/js/filter.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form */ "./src/js/form.js");
+
+
 
 
  // window.onload = function() {
@@ -147,6 +298,8 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_progress_bar__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_scrolling__WEBPACK_IMPORTED_MODULE_1__["default"])('.pageup');
   Object(_burger__WEBPACK_IMPORTED_MODULE_2__["default"])('.menu', '.nav__trigger');
+  Object(_filter__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_form__WEBPACK_IMPORTED_MODULE_4__["default"])('form');
 });
 
 /***/ }),

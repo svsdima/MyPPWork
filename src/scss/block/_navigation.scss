@@ -14,7 +14,7 @@
     display: block;
     position: absolute;
     top: 50%;
-    left: (60px/2) - (28px /2);
+    left: 9px;
     padding: (4px * 2) 0;
     margin-top: -((4px * 5) / 2);
     transition: 0.2s ease-in-out;
@@ -26,8 +26,8 @@
         &,
         &:before,
         &:after {
-            width: 28px;
-            height: 4px;
+            width: 40px;
+            height: 6px;
             background-color: #7d87a8;
             transition: 0.2s ease-in-out;
             border-radius: 4px;
@@ -44,11 +44,11 @@
         }
 
         &:before {
-            transform: translateY(-(4px * 2));
+            transform: translateY(-(6px * 2));
         }
         
         &:after {
-            transform: translateY((4px * 2));
+            transform: translateY((6px * 2));
         }
     }
     
@@ -67,6 +67,7 @@
 
 .menu {
     position: fixed;
+    opacity: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -74,7 +75,7 @@
     width: 200px;
     height: 100vh;
     background-color: black;
-    z-index: 0;
+    z-index: 10;
     transition: 1s all ease;
 }
 
