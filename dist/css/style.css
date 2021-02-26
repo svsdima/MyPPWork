@@ -3540,18 +3540,25 @@ template {
   font-weight: 700;
   text-transform: uppercase; }
 
+.subtitle {
+  font-size: 28px;
+  text-align: left;
+  font-weight: 500; }
+
 .pageup {
   opacity: 0;
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   position: fixed;
-  bottom: 50px;
-  right: 5%;
+  bottom: 30px;
+  right: 3%;
   z-index: 30;
-  background-color: #fff;
   cursor: pointer;
-  border: 1px solid white;
-  transition: 1s all; }
+  transition: .5s all ease;
+  border-radius: 100%;
+  background-color: #7692d4; }
+  .pageup:hover {
+    background-color: #506491; }
 
 .preloader_malc {
   position: fixed;
@@ -3629,7 +3636,7 @@ img {
       width: 40px;
       height: 6px;
       background-color: #7d87a8;
-      transition: 0.2s ease-in-out;
+      transition: 0.5s ease-in-out;
       border-radius: 4px; }
     .nav__trigger .bars:before, .nav__trigger .bars:after {
       content: '';
@@ -3700,7 +3707,8 @@ img {
 .header {
   background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
   padding-bottom: 50px;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .header-btn {
     position: relative;
     width: 200px;
@@ -3712,13 +3720,15 @@ img {
       font-size: 25px;
       font-weight: 300; }
   .header__wrapper {
-    padding-top: 250px; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .header .text {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: center;
-    position: relative; }
+    justify-content: center; }
   .header .title {
     text-align: center;
     text-transform: uppercase; }
@@ -3744,7 +3754,6 @@ img {
     align-items: center;
     padding: 0; }
     .header .social__links li {
-      border: 1px solid #757575;
       list-style-type: none;
       margin-top: 20px;
       display: block;
@@ -3769,19 +3778,19 @@ img {
 .github {
   margin-right: 30px; }
   .github img {
-    background-color: #b4ceee;
-    transition: all .5s ease; }
+    transition: all .5s ease;
+    border-radius: 100%; }
     .github img:hover {
       border-radius: 100%;
       background-color: #5d75ab; }
 
-.hh img {
-  background-color: #b4ceee;
-  transition: all .5s ease; }
+.vk img {
+  transition: all .5s ease;
+  border-radius: 100%; }
 
-.hh:hover img {
+.vk:hover img {
   border-radius: 100%;
-  background-color: #8d0404; }
+  background-color: #4477bb; }
 
 .line {
   width: 400px;
@@ -3824,7 +3833,7 @@ img {
     margin: 0 auto;
     padding-right: 10px; }
   .skills__progress {
-    width: 200px;
+    width: 220px;
     height: 20px;
     padding: 3px 5px;
     background: rgba(0, 0, 0, 0.25);
@@ -3878,12 +3887,14 @@ img {
       transition: .5s all ease;
       width: 200px;
       text-align: center;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
       background-color: rgba(0, 0, 0, 0.25); }
       .portfolio__menu li:hover {
-        background-color: rgba(0, 0, 0, 0.8); }
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 0.7); }
     .portfolio__menu .active {
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 0.7); }
   .portfolio__no {
     font-size: 20px;
     text-align: center;
@@ -3983,7 +3994,8 @@ img {
 
 .contact-me {
   background: linear-gradient(135deg, #2a4a67 0%, #225695 100%);
-  position: relative; }
+  position: relative;
+  padding: 20px 0 50px 0; }
   .contact-me::after {
     content: '';
     position: absolute;
@@ -4000,64 +4012,61 @@ img {
     visibility: visible; }
   .contact-me__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 0; }
 
-.form * {
-  outline: none; }
-
-.form__item {
-  margin-top: 20px; }
-  .form__item ._error {
-    box-shadow: 0 0 15px #5c1515;
-    background-color: #441010; }
-
-.form__label {
-  font-size: 18px;
-  display: block;
-  margin-top: 10px; }
-
-.form__input {
-  font-size: 18px;
-  height: 50px;
-  padding: 0 20px;
-  border-radius: 5px;
-  width: 100%;
-  background-color: #15355c;
-  transition: .5s all ease; }
-  .form__input:focus {
-    box-shadow: 0 0 15px #15355c;
-    background-color: #0b1b30; }
-
-.form textarea.form__input {
-  min-height: 120px;
-  resize: vertical;
-  padding: 20px; }
-
-.form__button {
-  margin-left: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
-  background-color: #15355c;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 0 20px;
-  cursor: pointer;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 3px 0 #0e243f;
-  transition: .5s all ease;
-  position: relative; }
-  .form__button:hover {
-    background-color: #091729; }
-  .form__button:active {
-    top: 3px;
-    box-shadow: 1px 0 #0e243f; }
+.form {
+  padding-right: 40px; }
+  .form * {
+    outline: none; }
+  .form__item {
+    margin-top: 20px; }
+    .form__item ._error {
+      box-shadow: 0 0 15px #5c1515;
+      background-color: #441010; }
+  .form__label {
+    font-size: 18px;
+    display: block;
+    margin-top: 10px; }
+  .form__input {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #15355c;
+    transition: .5s all ease; }
+    .form__input:focus {
+      box-shadow: 0 0 15px #15355c;
+      background-color: #0b1b30; }
+  .form textarea.form__input {
+    min-height: 120px;
+    resize: vertical;
+    padding: 20px; }
+  .form__button {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background-color: #15355c;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 3px 0 #0e243f;
+    transition: .5s all ease;
+    position: relative; }
+    .form__button:hover {
+      background-color: #091729; }
+    .form__button:active {
+      top: 3px;
+      box-shadow: 1px 0 #0e243f; }
 
 @media (max-width: 1300px) {
   .header__img {

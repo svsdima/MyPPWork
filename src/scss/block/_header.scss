@@ -4,7 +4,7 @@
     background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
     padding-bottom: 50px;
     height: 100vh;
-
+    position: relative;
     // position: relative;
     // color: #fff;
     // min-height: 100vh;
@@ -43,15 +43,18 @@
     &__wrapper {
         // display: flex;
         // align-items: center;
-        // justify-content: space-between;
-        padding-top: 250px;
+        // justify-content: center;
+        // padding-top: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .text {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        position: relative;
     }
     .title {
         text-align: center;
@@ -89,7 +92,7 @@
             align-items: center;
             padding: 0;
             li {
-                border: 1px solid #757575;
+                // border: 1px solid #757575;
                 list-style-type: none;
                 margin-top: 20px;
                 display: block;
@@ -121,23 +124,25 @@
 .github {
     margin-right: 30px;
     img {
-        background-color: #b4ceee;
+        // background-color: #b4ceee;
         transition: all .5s ease;
+        border-radius: 100%;
         &:hover {
             border-radius: 100%;
             background-color: #5d75ab;
         }
     }
 }
-.hh {
+.vk {
     img {
-        background-color: #b4ceee;
+        // background-color: #b4ceee;
         transition: all .5s ease;
+        border-radius: 100%;
     }
     &:hover {
         img {
             border-radius: 100%;
-            background-color: rgb(141, 4, 4);
+            background-color: #4477bb;
         }
     }
 }

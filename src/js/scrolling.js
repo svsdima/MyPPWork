@@ -3,7 +3,7 @@ const scrolling = (upSelector) => {
     const upElem = document.querySelector(upSelector);
 
     window.addEventListener('scroll', () => {
-        if (document.documentElement.scrollTop > 500) {
+        if (document.documentElement.scrollTop > 1000) {
             upElem.classList.add('animate__animated', 'animate__fadeIn');
             upElem.classList.remove('animate__fadeOut');
         } else {

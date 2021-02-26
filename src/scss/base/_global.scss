@@ -5,18 +5,28 @@
     font-weight: 700;
 	text-transform: uppercase;
 }
+.subtitle {
+    font-size: 28px;
+    text-align: left;
+    font-weight: 500;
+}
 .pageup {
     opacity: 0;
-	width: 26px ;
-	height: 26px;
+	width: 40px ;
+	height: 40px;
 	position: fixed;
-	bottom: 50px;
-	right: 5%;
+	bottom: 30px;
+	right: 3%;
 	z-index: 30;
-	background-color: #fff;
+	// background-color: #fff;
 	cursor: pointer;
-	border: 1px solid white;
-    transition: 1s all;
+	// border: 1px solid white;
+    transition: .5s all ease;
+	border-radius: 100%;
+	background-color: #7692d4;
+	&:hover {
+		background-color: #506491;
+	}
 }
 
 .preloader_malc {

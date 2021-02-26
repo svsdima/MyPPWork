@@ -110,11 +110,13 @@ const burger = (menuSelector, burgerSelector) => {
       menuElem.style.opacity = 1;
       menuElem.classList.add('animate__animated', 'animate__slideInLeft');
       menuElem.classList.remove('animate__slideOutLeft');
+      burgerElem.classList.add('is-active');
     } else {
       // menuElem.style.display = "none";
       menuElem.classList.add('animate__slideOutLeft');
       menuElem.classList.remove('animate__slideInLeft');
       menuElem.style.opacity = 0;
+      burgerElem.classList.remove('is-active');
     }
   });
 };
@@ -338,7 +340,7 @@ const scrolling = upSelector => {
   /* Появление стрелки вверх */
   const upElem = document.querySelector(upSelector);
   window.addEventListener('scroll', () => {
-    if (document.documentElement.scrollTop > 500) {
+    if (document.documentElement.scrollTop > 1000) {
       upElem.classList.add('animate__animated', 'animate__fadeIn');
       upElem.classList.remove('animate__fadeOut');
     } else {
