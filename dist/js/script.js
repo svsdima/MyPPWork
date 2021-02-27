@@ -194,84 +194,6 @@ const filter = () => {
 
 /***/ }),
 
-/***/ "./src/js/form.js":
-/*!************************!*\
-  !*** ./src/js/form.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-const form = idElement => {
-  const form = document.getElementById(idElement),
-        formWrapper = document.querySelector('.contact-me');
-  form.addEventListener('submit', formSend);
-
-  async function formSend(e) {
-    e.preventDefault();
-    let error = formValidate(form);
-    let formData = new FormData(form);
-
-    if (error === 0) {
-      formWrapper.classList.add('_sending'); // let response = await fetch('sendmail.php', {
-      //     method: 'POST',
-      //     body: formData
-      // });
-      // if (response.ok) {
-      //     let result = await response.json();
-      //     alert(result.message);
-      //     formPreview.innerHTML = '';
-      //     form.reset();
-      // } else {
-      //     alert('Ошибка');
-      // }
-    } else {
-      alert('Заполните обязательные поля');
-    }
-  }
-
-  function formValidate(form) {
-    let error = 0,
-        formReq = document.querySelectorAll('._req');
-
-    for (let index = 0; index < formReq.length; index++) {
-      const input = formReq[index];
-      formRemoveError(input);
-
-      if (input.classList.contains('_email')) {
-        if (emailTest(input)) {
-          formAddError(input);
-          error++;
-        }
-      } else {
-        if (input.value === '') {
-          formAddError(input);
-          error++;
-        }
-      }
-    }
-  }
-
-  function formAddError(input) {
-    input.parentElement.classList.add('_error');
-    input.classList.add('_error');
-  }
-
-  function formRemoveError(input) {
-    input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
-  } // /* Тест email */
-  // function emailTest(input) {
-  //     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-  // }
-
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (form);
-
-/***/ }),
-
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -285,8 +207,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scrolling */ "./src/js/scrolling.js");
 /* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./burger */ "./src/js/burger.js");
 /* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter */ "./src/js/filter.js");
-/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form */ "./src/js/form.js");
-
 
 
 
@@ -301,7 +221,6 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_scrolling__WEBPACK_IMPORTED_MODULE_1__["default"])('.pageup');
   Object(_burger__WEBPACK_IMPORTED_MODULE_2__["default"])('.menu', '.nav__trigger');
   Object(_filter__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  Object(_form__WEBPACK_IMPORTED_MODULE_4__["default"])('form');
 });
 
 /***/ }),

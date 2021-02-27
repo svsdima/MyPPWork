@@ -1,33 +1,8 @@
 .header {
-    // background-color: #060f18;
-    // background: url(../img/bg-header.jpg) center (center / cover) no-repeat;
     background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
     padding-bottom: 50px;
     height: 100vh;
     position: relative;
-    // position: relative;
-    // color: #fff;
-    // min-height: 100vh;
-    // width: 100vw;
-    // // padding: 0 50px;
-    // transform-style: inherit;
-
-    // &:before {
-    //     content: "";
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     position: absolute;
-    //     min-height: 100vh;
-    //     // background: url(../img/bg-header-2.jpg) center (center / cover) no-repeat;
-    //     // background-color: #060f18;
-    //     background: linear-gradient(135deg, #2a4a67 0%, #191e27 100%);
-    //     transition: 1s linear;
-    //     transform: translatez(-1px) scale(2);
-    //     z-index: -1;
-    // }
-
     &-btn {
         position: relative;
         width: 200px;
@@ -41,10 +16,6 @@
         }
     }
     &__wrapper {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // padding-top: 300px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -58,9 +29,7 @@
     }
     .title {
         text-align: center;
-        // padding: 0 0 0 20px;
         text-transform: uppercase;
-        // width: 50%;
         &__header {
             color: #4e5763;
             font-weight: 300;
@@ -70,7 +39,6 @@
         &__subheader {
             font-size: 38px;
             font-weight: 700;
-
         }
     }
     &__img {
@@ -81,24 +49,6 @@
             width: 100%;
             border-radius: 30%;
             border: 1px solid #060f18;
-        }
-        // height: 100px;
-        // width: 400px;
-    }
-    .social {
-        &__links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-            li {
-                // border: 1px solid #757575;
-                list-style-type: none;
-                margin-top: 20px;
-                display: block;
-                width: 50px;
-                height: 50px;
-            }
         }
     }
 }
@@ -121,74 +71,6 @@
         }
     }
 }
-.github {
-    margin-right: 30px;
-    img {
-        // background-color: #b4ceee;
-        transition: all .5s ease;
-        border-radius: 100%;
-        &:hover {
-            border-radius: 100%;
-            background-color: #5d75ab;
-        }
-    }
-}
-.vk {
-    img {
-        // background-color: #b4ceee;
-        transition: all .5s ease;
-        border-radius: 100%;
-    }
-    &:hover {
-        img {
-            border-radius: 100%;
-            background-color: #4477bb;
-        }
-    }
-}
-// .menu {
-//     padding: 10px 5px;
-//     // background-color: rgba(#0a192b, 0.25);
-//     width: 200px;
-//     height: 100vh;
-//     background-color: black;
-//     z-index: 0;
-//     &__list {
-//         text-align: center;
-//         // display: flex;
-//         // justify-content: space-between;
-//         // align-items: center;
-//         padding: 10px 5px;
-//         margin: 0;
-//         li {
-//             list-style-type: none;
-//             position: relative;
-//         }
-//         a {
-//             text-decoration: none;
-//             font-size: 14px;
-//             font-weight: 700;
-//             text-transform: uppercase;
-//             &:before {
-//                 content: "";
-//                 width: 0;
-//                 height: 0.1em;
-//                 position: absolute;
-//                 bottom: 0;
-//                 left: 50%;
-//                 background: #fff;
-//                 transition: all 0.3s;
-//             }
-//             &:hover {
-//                 &:before {
-//                     width: 100%;
-//                     left: 0;
-//                     background: #fff;
-//                 }
-//             }
-//         }
-//     }
-// }
 .line {
     width: 400px;
     height: 2px;
