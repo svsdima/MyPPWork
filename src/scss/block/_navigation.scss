@@ -30,7 +30,7 @@
             width: 40px;
             height: 6px;
             background-color: #7d87a8;
-            transition: 0.3s ease-in-out;
+            transition: 0.2s ease-in-out;
             border-radius: 4px;
         }
         
@@ -51,6 +51,7 @@
         &:after {
             transform: translateY((6px * 2));
         }
+        
     }
     
     &.is-active {
@@ -66,9 +67,25 @@
     }
 }
 
+.nav__bar {
+    width: 50px;
+    .nav__trigger {
+        left: 5px;
+    }
+    .bars {
+        
+        &,
+        &:before,
+        &:after {
+            width: 40px;
+            height: 6px;
+    }
+    }
+}
+
 .menu {
     position: fixed;
-    opacity: 1;
+    display: none;
     top: 0;
     right: 0;
     bottom: 0;
@@ -77,7 +94,7 @@
     height: 100vh;
     background-color: black;
     z-index: 10;
-    transition: .5s all ease;
+    transition: .2s all ease;
 }
 
 .menu__list {
