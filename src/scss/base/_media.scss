@@ -45,13 +45,17 @@
         }
         
     }
-    
-    .contact-me {
-        &__wrapper {
-            justify-content: center;
+    .about-me {
+        &__img {
+            width: 370px;
         }
-        &__list {
-            margin: 0px 20px 20px;
+        &__header {
+            font-size: 27px;
+        }
+        &__top {
+            .about-me__content {
+                width: 50%;
+            }
         }
     }
 }
@@ -127,9 +131,36 @@
             }
         }
     }
-    
+    .about-me {
+        &__top {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .about-me__content {
+                width: auto;
+            }
+        }
+        &__img {
+            // width: 70%;
+        }
+        
+        &__header {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__info {
+            padding-bottom: 20px;
+        }
+    }
 
-
+    .contact-me {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -309,6 +340,21 @@
     .skills__list {
         padding: 10px 10px;
     }
+    .about-me {
+        &__wrapper {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__img {
+            width: 350px;
+        }
+        &__information {
+            padding-left: 0;
+        }
+        &__info {
+            padding-bottom: 30px;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -323,6 +369,11 @@
             &__info {
                 font-size: 15px;
             }
+        }
+    }
+    .about-me {
+        &__img {
+            width: 300px;
         }
     }
 }
@@ -355,6 +406,11 @@
     }
     .skills__list-wrapper {
         width: 100%;
+    }
+    .about-me {
+        &__img {
+            width: 250px;
+        }
     }
 }
 

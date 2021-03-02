@@ -15,7 +15,7 @@ const scrolling = (upSelector) => {
     
     /* Скролл при помощи requestAnimationFrame */
     let links = document.querySelectorAll('[href^="#"]'),
-        speed = 0.3;
+        speed = 0.15;
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {

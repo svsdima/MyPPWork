@@ -179,7 +179,7 @@ const filter = () => {
     typeFilter(markStore);
   });
   btnApp.addEventListener('click', () => {
-    typeFilter();
+    typeFilter(markApp);
   });
   menu.addEventListener('click', e => {
     let target = e.target;
@@ -271,7 +271,7 @@ const scrolling = upSelector => {
   /* Скролл при помощи requestAnimationFrame */
 
   let links = document.querySelectorAll('[href^="#"]'),
-      speed = 0.3;
+      speed = 0.15;
   links.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
