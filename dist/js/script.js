@@ -179,7 +179,7 @@ const filter = () => {
     typeFilter(markStore);
   });
   btnApp.addEventListener('click', () => {
-    typeFilter(markApp);
+    typeFilter();
   });
   menu.addEventListener('click', e => {
     let target = e.target;
