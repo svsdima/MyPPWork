@@ -179,7 +179,7 @@ const filter = () => {
     typeFilter(markStore);
   });
   btnApp.addEventListener('click', () => {
-    typeFilter();
+    typeFilter(markApp);
   });
   menu.addEventListener('click', e => {
     let target = e.target;
@@ -211,11 +211,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // window.onload = function() {
-//     setTimeout(function() {
-//         document.getElementById("preloader_malc").style.opacity = 0;
-//     }, 400);
-// };
 
 window.addEventListener('DOMContentLoaded', () => {
   Object(_progress_bar__WEBPACK_IMPORTED_MODULE_0__["default"])();
@@ -261,11 +256,11 @@ const scrolling = upSelector => {
   const upElem = document.querySelector(upSelector);
   window.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > 1000) {
-      upElem.classList.add('animate__animated', 'animate__fadeIn');
-      upElem.classList.remove('animate__fadeOut');
+      upElem.style.pointerEvents = "all";
+      upElem.style.opacity = "1";
     } else {
-      upElem.classList.add('animate__fadeOut');
-      upElem.classList.remove('animate__fadeIn');
+      upElem.style.pointerEvents = "none";
+      upElem.style.opacity = "0";
     }
   });
   /* Скролл при помощи requestAnimationFrame */

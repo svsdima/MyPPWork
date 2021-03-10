@@ -459,6 +459,11 @@
                 bottom: 0;
                 opacity: 1;
             }
+            &__link {
+                position: static;
+                bottom: 0;
+                opacity: 1;
+            }
             &:hover {
                 background-color: rgba(#191e27, 0.25);
                 a {

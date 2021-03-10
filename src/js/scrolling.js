@@ -4,11 +4,11 @@ const scrolling = (upSelector) => {
 
     window.addEventListener('scroll', () => {
         if (document.documentElement.scrollTop > 1000) {
-            upElem.classList.add('animate__animated', 'animate__fadeIn');
-            upElem.classList.remove('animate__fadeOut');
+            upElem.style.pointerEvents = "all";
+            upElem.style.opacity = "1";
         } else {
-            upElem.classList.add('animate__fadeOut');
-            upElem.classList.remove('animate__fadeIn');
+            upElem.style.pointerEvents = "none";
+            upElem.style.opacity = "0";
         }
     });
 

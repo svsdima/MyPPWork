@@ -45,7 +45,7 @@ const filter = () => {
     });
 
     btnApp.addEventListener('click', () => {
-        typeFilter();
+        typeFilter(markApp);
     });
 
     menu.addEventListener('click', (e) => {
