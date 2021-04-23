@@ -435,7 +435,7 @@
     
 }
 
-@media (orientation:portrait) {
+@media screen and (max-width: 900px) {
     .portfolio {
         .item {
             padding-top: 10px;
@@ -455,11 +455,6 @@
                 opacity: 1;
             }
             &__info {
-                position: static;
-                bottom: 0;
-                opacity: 1;
-            }
-            &__link {
                 position: static;
                 bottom: 0;
                 opacity: 1;

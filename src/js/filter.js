@@ -5,11 +5,13 @@ const filter = () => {
           btnLanding = menu.querySelector('.landing'),
           btnStore = menu.querySelector('.store'),
           btnApp = menu.querySelector('.app'),
+          btnOther = menu.querySelector('.other'),
           wrapper = document.querySelector('.portfolio__wrapper'),
           markAll = wrapper.querySelectorAll('.all'),
           markLanding = wrapper.querySelectorAll('.landing'),
           markStore = wrapper.querySelectorAll('.store'),
           markApp = wrapper.querySelectorAll('.app'),
+          markOther = wrapper.querySelectorAll('.other'),
           no = document.querySelector('.portfolio__no');
 
     /* Фильтрация элементов */
@@ -46,6 +48,10 @@ const filter = () => {
 
     btnApp.addEventListener('click', () => {
         typeFilter(markApp);
+    });
+
+    btnOther.addEventListener('click', () => {
+        typeFilter(markOther);
     });
 
     menu.addEventListener('click', (e) => {

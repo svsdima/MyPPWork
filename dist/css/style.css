@@ -4017,8 +4017,6 @@ img {
   .item img {
     display: block;
     transition: all .4s ease; }
-    .item img:hover {
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.7), 0 0 0 3px #6caafc; }
   .item span {
     display: block;
     position: relative;
@@ -4035,11 +4033,6 @@ img {
     .item:hover .item__info {
       opacity: 1;
       bottom: 0; }
-    .item:hover .item__link {
-      opacity: 0.8;
-      bottom: 0; }
-      .item:hover .item__link img {
-        border-radius: 100%; }
     .item:hover a {
       filter: none;
       border-radius: 20%; }
@@ -4078,21 +4071,6 @@ img {
     transition: all .5s ease;
     opacity: 0;
     text-transform: uppercase; }
-  .item__link {
-    padding-top: 10px;
-    transition: all .4s ease;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    left: 0;
-    right: 0;
-    bottom: 65px;
-    margin: 0 auto;
-    opacity: 0; }
-    .item__link img {
-      background-color: #bdbdbd; }
-    .item__link a {
-      border: none; }
 
 .about-me {
   padding: 30px 0 50px 0;
@@ -4100,7 +4078,7 @@ img {
   .about-me__wrapper {
     padding: 30px 20px 30px 20px;
     margin-top: 50px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
     background-color: rgba(0, 0, 0, 0.25);
     position: relative; }
   .about-me__top {
@@ -4119,8 +4097,7 @@ img {
     background-color: black; }
     .about-me__img img {
       display: block;
-      width: 100%;
-      border-radius: 30%; }
+      width: 100%; }
   .about-me__header {
     color: #4e5763;
     font-weight: 500;
@@ -4437,7 +4414,7 @@ img {
   .header .btn {
     font-size: 20px; } }
 
-@media (orientation: portrait) {
+@media screen and (max-width: 900px) {
   .portfolio .item {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -4452,10 +4429,6 @@ img {
       bottom: 20px;
       opacity: 1; }
     .portfolio .item__info {
-      position: static;
-      bottom: 0;
-      opacity: 1; }
-    .portfolio .item__link {
       position: static;
       bottom: 0;
       opacity: 1; }
